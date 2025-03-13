@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElementsByClassname</title>
+    <style>
+      h4 {
+        border: 2px solid black;
+        padding: 10px;
+      }
+      .btn{
+        padding: 10px;
+        color: white;
+        background-color: rgb(4, 75, 75);
+      }
+    </style>
+  </head>
+  <body>
+    <h4 class="example">Div1</h4>
+    <h4 class="yellow">Div2</h4>
+    <h4 class="example">Div4</h4>
+    <h4 class="blue">Div3</h4>
+    <h4 class="blue">Div5</h4>
+    <h4 class="blue">Div6</h4>
+    <h4 class="blue">Div7</h4>
+    <h4 class="blue">Div8</h4>
+    <h4 class="blue">Div8</h4>
+
+    <button onclick="changeClr()" class="btn">Click here to change background color</button>
+
+    <script>
+      document.getElementsByClassName("yellow")[0].style.border =
+        "5px solid yellow";
+      //   document.getElementsByClassName("blue")[0].style.border =
+      //     "5px solid blue";
+      document.getElementsByClassName("blue")[3].style.border =
+        "5px solid blue";
+      document.getElementsByClassName("blue")[0].style.color = "red";
+
+      function changeClr(){
+        let btn=document.getElementsByClassName("btn")[0].style.background="blue";
+      }
+      </script>
+  </body>
+</html>
